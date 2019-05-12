@@ -113,7 +113,17 @@ $(function() {
     });
   
   }
-  
+
+
+
+
 });
 
-
+$(function() {
+		$('.card-img').on('click', function() {
+			$('.imagepreview').attr('src', $(this).attr('src'));
+			$('#imagemodal').modal('show');
+			var text = $(this).attr('alt');
+			$('#caption').text(text);
+		});
+});
